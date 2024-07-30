@@ -118,6 +118,8 @@ namespace Revit.IFC.Export.Exporter
 
       protected QuantitiesToExport m_QuantitiesToExport = null;
 
+      protected Logger _logger = Logger.CreateLogger(typeof(Exporter));
+
       #region IExporterIFC Members
 
       /// <summary>
@@ -150,6 +152,8 @@ namespace Revit.IFC.Export.Exporter
       /// are visible or not. That allows us to, e.g., choose a plan view but get 3D geometry.</remarks>
       public void ExportIFC(Autodesk.Revit.DB.Document document, ExporterIFC exporterIFC, Autodesk.Revit.DB.View filterView)
       {
+         Console.WriteLine("Hello World! I am Custom IFC Exporter =)."); 
+         _logger.Log("Hello World! I am Custom IFC Exporter =)."); 
          // Make sure our static caches are clear at the start, and end, of export.
          ExporterCacheManager.Clear();
          ExporterStateManager.Clear();
@@ -197,6 +201,9 @@ namespace Revit.IFC.Export.Exporter
                m_IfcFile.Close();
                m_IfcFile = null;
             }
+            
+            Console.WriteLine("Custom IFC Exporter Has Finished its task."); 
+            _logger.Log("Custom IFC Exporter Has Finished its task."); 
          }
       }
 
