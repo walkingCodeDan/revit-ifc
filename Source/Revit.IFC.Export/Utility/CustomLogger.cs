@@ -59,7 +59,7 @@ namespace Revit.IFC.Export.Utility
       private void WriteLog(string logType, object obj)
       {
          File.AppendAllText(LogFilePath, 
-            string.Format("{0}-{1}-{2}:{3}", 
+            string.Format("{0}-{1}-{2}:{3}\n", 
                DateTime.Now.ToString("MM/dd/yyyy-hh:mm:ss"), logType, _name, obj));
       }
    }
