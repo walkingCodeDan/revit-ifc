@@ -230,6 +230,7 @@
     <Compile Include="Utility\BaseRelationsCache.cs" />
     <Compile Include="Utility\BooleanPropertyInfoCache.cs" />
     <Compile Include="Utility\CategoryUtil.cs" />
+    <Compile Include="Utility\CustomLogger.cs" />
     <Compile Include="Utility\ElementOrConnector.cs" />
     <Compile Include="Utility\FabricParams.cs" />
     <Compile Include="Utility\LinkedFileExportAs.cs" />

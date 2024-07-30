@@ -119,7 +119,7 @@ namespace Revit.IFC.Export.Exporter
 
       protected QuantitiesToExport m_QuantitiesToExport = null;
 
-      protected Logger _logger = Logger.CreateLogger(typeof(Exporter));
+      protected CustomLogger CustomLogger = CustomLogger.CreateLogger(typeof(Exporter));
 
       #region IExporterIFC Members
 
@@ -181,7 +181,7 @@ namespace Revit.IFC.Export.Exporter
       public void ExportIFC(Document document, ExporterIFC exporterIFC, View filterView)
       {
          Console.WriteLine("Hello World! I am Custom IFC Exporter =)."); 
-         _logger.Log("Hello World! I am Custom IFC Exporter =)."); 
+         //CustomLogger.Log("Hello World! I am Custom IFC Exporter =)."); 
          // Make sure our static caches are clear at the start, and end, of export.
          ExporterCacheManager.Clear(true);
          ExporterStateManager.Clear();
@@ -259,7 +259,7 @@ namespace Revit.IFC.Export.Exporter
             }
             
             Console.WriteLine("Custom IFC Exporter Has Finished its task."); 
-            _logger.Log("Custom IFC Exporter Has Finished its task."); 
+            //CustomLogger.Log("Custom IFC Exporter Has Finished its task."); 
          }
       }
 
